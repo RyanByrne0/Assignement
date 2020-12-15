@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
 
 
-    float speed = 0;
+    public float speed = 0;
     public float maxSpeed;
     public float mouseSensitivity = 100.0f;
     public float clampAngle = 80.0f;

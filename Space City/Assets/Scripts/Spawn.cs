@@ -11,10 +11,10 @@ public class Spawn : MonoBehaviour
     int Scale;
     int yScale;
     int zScale;
-    int maxPlanets = 230;
+
 
     //floats
-    float maxPos;
+   
 
     //Gameobjects
     public GameObject Planet;
@@ -31,8 +31,9 @@ public class Spawn : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
+       
         Spawning();
         Clones = GameObject.FindGameObjectsWithTag("Planet");
         
@@ -41,14 +42,24 @@ public class Spawn : MonoBehaviour
     void Spawning()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Player.transform.position.x > 5000 || Player.transform.position.x < -5000 || Player.transform.position.y > 1000 || Player.transform.position.y < -1000 || Player.transform.position.z > 5000 || Player.transform.position.z < -5000)
         {
+            Player.transform.position = new Vector3(0, 0, 0);
+
+            //Destroy past planets
+            for (int i = 0; i < Clones.Length; i++)
+
+            {
+                Destroy(Clones[i]);
+            }
+
             for (int i = 0; i < 450; i++)
             {
                 //spawn pos of buildings
                 xPos = Random.Range(-5000, 5000);
                 yPos = Random.Range(-1000, 1000);
                 zPos = Random.Range(-5000, 5000);
+                
                 Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, Player.transform.position.y + yPos, Player.transform.position.z + zPos), Quaternion.identity);
                 
 
@@ -60,14 +71,10 @@ public class Spawn : MonoBehaviour
 
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            for (int i = 0; i < Clones.Length; i++)
-
-            {
-                Destroy(Clones[i]);
-            }
-        }
+        
+        
+         
+        
     }
 
      void InitialSpawn()
@@ -90,4 +97,6 @@ public class Spawn : MonoBehaviour
 
         }
     }
+
+   
 }
