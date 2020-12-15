@@ -29,20 +29,10 @@ public class Movement : MonoBehaviour
 
     void Moving()
     {
-        if (Input.GetKey("w"))
-        {
-            speed = maxSpeed * Time.deltaTime;
-            transform.Translate(0, 0, speed);
-        }
-        else if (Input.GetKey("s"))
-        {
-            speed = -maxSpeed * Time.deltaTime;
-            transform.Translate(0, 0, speed);
-        }
-        else
-        {
-            speed = 0;
-        }
+        speed = maxSpeed * Time.deltaTime;
+        transform.Translate(0, 0, speed);
+        
+
 
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = -Input.GetAxis("Mouse Y");

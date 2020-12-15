@@ -13,6 +13,8 @@ public class Spawn : MonoBehaviour
     int zScale;
     int maxPlanets = 230;
 
+    //floats
+    float maxPos;
 
     //Gameobjects
     public GameObject Planet;
@@ -25,6 +27,7 @@ public class Spawn : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
+        InitialSpawn();
     }
 
 
@@ -32,24 +35,25 @@ public class Spawn : MonoBehaviour
     {
         Spawning();
         Clones = GameObject.FindGameObjectsWithTag("Planet");
-
+        
     }
 
     void Spawning()
     {
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            for (int i = 0; i < 250; i++)
+            for (int i = 0; i < 450; i++)
             {
                 //spawn pos of buildings
-                xPos = Random.Range(-4000, 4000);
-                yPos = Random.Range(-350, 350);
-                zPos = Random.Range(-4000, 4000);
+                xPos = Random.Range(-5000, 5000);
+                yPos = Random.Range(-1000, 1000);
+                zPos = Random.Range(-5000, 5000);
                 Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, Player.transform.position.y + yPos, Player.transform.position.z + zPos), Quaternion.identity);
                 
 
                 //Size of buildings
-                Scale = Random.Range(3, 250);
+                Scale = Random.Range(10, 300);
                
                 Planet.transform.localScale = new Vector3(Scale, Scale, Scale);
 
@@ -63,6 +67,27 @@ public class Spawn : MonoBehaviour
             {
                 Destroy(Clones[i]);
             }
+        }
+    }
+
+     void InitialSpawn()
+    {
+        //Initial spawn
+        for (int i = 0; i < 250; i++)
+        {
+            //spawn pos of buildings
+            xPos = Random.Range(-4000, 4000);
+            yPos = Random.Range(-350, 350);
+            zPos = Random.Range(-4000, 4000);
+            Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, Player.transform.position.y + yPos, Player.transform.position.z + zPos), Quaternion.identity);
+
+
+            //Size of buildings
+            Scale = Random.Range(3, 250);
+
+            Planet.transform.localScale = new Vector3(Scale, Scale, Scale);
+
+
         }
     }
 }
