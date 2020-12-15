@@ -13,7 +13,7 @@ public class BuildingScript : MonoBehaviour
     {
         Color ranColor = Random.ColorHSV(0, 1, .8f, 1);
         Pos = transform.position;
-        y = Random.Range(-5 * Time.deltaTime, 5 * Time.deltaTime);
+        y = Random.Range(-20 * Time.deltaTime, 20 * Time.deltaTime );
         ApplyMaterial(ranColor, 0);
     }
 
@@ -30,13 +30,13 @@ public class BuildingScript : MonoBehaviour
 
     public void Movement()
     {
-       if(transform.position.y < -151)
+       if(transform.position.y < -4000)
         {
-            y = Random.Range(-15 * Time.deltaTime, 15 * Time.deltaTime);
+            y += Random.Range(5* Time.deltaTime , 20 * Time.deltaTime );
         }
-       else if(transform.position.y > 151)
+       else if(transform.position.y > 4000)
         {
-            y = Random.Range(-15 * Time.deltaTime, 15 * Time.deltaTime);
+            y += Random.Range(-5 * Time.deltaTime, -20 * Time.deltaTime);
         }
 
         transform.Translate(0, y, 0);

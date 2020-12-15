@@ -42,7 +42,7 @@ public class Spawn : MonoBehaviour
     void Spawning()
     {
 
-        if (Player.transform.position.x > 5000 || Player.transform.position.x < -5000 || Player.transform.position.y > 1000 || Player.transform.position.y < -1000 || Player.transform.position.z > 5000 || Player.transform.position.z < -5000)
+        if (Player.transform.position.x > 15000 || Player.transform.position.x < -15000 || Player.transform.position.y > 4000 || Player.transform.position.y < -4000 || Player.transform.position.z > 15000 || Player.transform.position.z < -15000)
         {
             Player.transform.position = new Vector3(0, 0, 0);
 
@@ -53,18 +53,18 @@ public class Spawn : MonoBehaviour
                 Destroy(Clones[i]);
             }
 
-            for (int i = 0; i < 450; i++)
+            for (int i = 0; i < 350; i++)
             {
                 //spawn pos of buildings
-                xPos = Random.Range(-5000, 5000);
-                yPos = Random.Range(-1000, 1000);
-                zPos = Random.Range(-5000, 5000);
+                xPos = Random.Range(-15500, 15500);
+                yPos = Random.Range(-4000, 4000);
+                zPos = Random.Range(-15500, 15500);
                 
                 Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, Player.transform.position.y + yPos, Player.transform.position.z + zPos), Quaternion.identity);
                 
 
                 //Size of buildings
-                Scale = Random.Range(10, 300);
+                Scale = Random.Range(300, 1000);
                
                 Planet.transform.localScale = new Vector3(Scale, Scale, Scale);
 
@@ -80,17 +80,17 @@ public class Spawn : MonoBehaviour
      void InitialSpawn()
     {
         //Initial spawn
-        for (int i = 0; i < 250; i++)
+        for (int i = 0; i < 350; i++)
         {
             //spawn pos of buildings
-            xPos = Random.Range(-4000, 4000);
-            yPos = Random.Range(-350, 350);
-            zPos = Random.Range(-4000, 4000);
+            xPos = Random.Range(-15000, 15000);
+            yPos = Random.Range(-4000, 4000);
+            zPos = Random.Range(-15500, 15500);
             Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, Player.transform.position.y + yPos, Player.transform.position.z + zPos), Quaternion.identity);
 
 
             //Size of buildings
-            Scale = Random.Range(3, 250);
+            Scale = Random.Range(300, 1000);
 
             Planet.transform.localScale = new Vector3(Scale, Scale, Scale);
 

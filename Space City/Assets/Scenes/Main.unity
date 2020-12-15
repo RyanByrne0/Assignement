@@ -209,13 +209,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780988750}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.9988162, y: -0, z: -0, w: -0.048643753}
   m_LocalPosition: {x: 5.4, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 185.576, y: 0, z: 0}
 --- !u!114 &780988753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780988750}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af618cc171759704bb3331f3793e7d3c, type: 3}
   m_Name: 
@@ -238,8 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1075371443}
-  - component: {fileID: 1075371445}
-  - component: {fileID: 1075371444}
+  - component: {fileID: 1075371446}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -255,20 +254,69 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075371442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.025780218, y: -0.1450934, z: -1.3542241}
-  m_LocalScale: {x: 1.6121492, y: 1.6121492, z: 1.6121492}
-  m_Children: []
-  m_Father: {fileID: 1796873974}
-  m_RootOrder: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.53343, y: 0.53343, z: 0.53343}
+  m_Children:
+  - {fileID: 1796873974}
+  - {fileID: 1113593597}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!199 &1075371444
+--- !u!114 &1075371446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075371442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df9becbd3281ac42b087ec2cd20f402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 500
+  mouseSensitivity: 200
+  clampAngle: 80
+--- !u!1 &1113593596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1113593597}
+  - component: {fileID: 1113593599}
+  - component: {fileID: 1113593598}
+  m_Layer: 0
+  m_Name: Particles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1113593597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113593596}
+  m_LocalRotation: {x: 0.013541204, y: -0, z: -0, w: 0.9999083}
+  m_LocalPosition: {x: 0, y: 0, z: 11.97}
+  m_LocalScale: {x: 0.3866348, y: 0.1393501, z: 1.5535389}
+  m_Children: []
+  m_Father: {fileID: 1075371443}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 1.552, y: 0, z: 0}
+--- !u!199 &1113593598
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075371442}
+  m_GameObject: {fileID: 1113593596}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -281,7 +329,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e320a3257ea8a5240a02a4a2e007414d, type: 2}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -302,7 +350,7 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_SortMode: 0
   m_MinParticleSize: 0
   m_MaxParticleSize: 0.5
@@ -327,13 +375,13 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!198 &1075371445
+--- !u!198 &1113593599
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075371442}
+  m_GameObject: {fileID: 1113593596}
   serializedVersion: 6
   lengthInSec: 5
   simulationSpeed: 1
@@ -346,7 +394,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -463,7 +511,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -517,10 +565,10 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.8301887, g: 0.5952297, b: 0, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 0.9339623, g: 0.7104602, b: 0.118066914, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -579,7 +627,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -955,14 +1003,14 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 0.1
+    angle: 53.8
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: -0, y: 171.46446, z: -0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Position: {x: 0, y: 0.000002447294, z: 0.00000011355223}
+    m_Rotation: {x: 9.483883, y: 180, z: 180}
+    m_Scale: {x: 1, y: 1.2311666, z: 0.9994383}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1041,7 +1089,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 16.27
       mode: 0
       spread: 0
       speed:
@@ -1099,7 +1147,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 1
+      mode: 0
       spread: 0
       speed:
         serializedVersion: 2
@@ -1160,7 +1208,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 15
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5091,9 +5139,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 90
+  near clip plane: 0.01
+  far clip plane: 15000
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5119,12 +5167,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796873971}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1464.4, y: 1, z: -176.76}
+  m_LocalPosition: {x: -0.015991211, y: 0.089999974, z: -0.1}
   m_LocalScale: {x: 0.62029, y: 0.62029, z: 0.62029}
-  m_Children:
-  - {fileID: 1075371443}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Children: []
+  m_Father: {fileID: 1075371443}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1796873975
 Light:
@@ -5137,14 +5184,14 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 50
-  m_Range: 75.85452
+  m_Color: {r: 0.7924528, g: 0.6586318, b: 0, a: 1}
+  m_Intensity: 50.53
+  m_Range: 714.627
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -5177,7 +5224,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 50
