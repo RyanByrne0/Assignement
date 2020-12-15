@@ -39,18 +39,18 @@ public class Spawn : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            for (int i = 0; i < 230; i++)
+            for (int i = 0; i < 250; i++)
             {
                 //spawn pos of buildings
                 xPos = Random.Range(-4000, 4000);
-                yPos = Random.Range(-150, 150);
+                yPos = Random.Range(-350, 350);
                 zPos = Random.Range(-4000, 4000);
-                Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, yPos, zPos), Quaternion.identity);
+                Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, Player.transform.position.y + yPos, Player.transform.position.z + zPos), Quaternion.identity);
+                
 
                 //Size of buildings
-                Scale = Random.Range(3, 150);
-                //yScale = Random.Range(3, 30);
-                //zScale = Random.Range(3, 15);
+                Scale = Random.Range(3, 250);
+               
                 Planet.transform.localScale = new Vector3(Scale, Scale, Scale);
 
 
