@@ -13,6 +13,9 @@ public class Movement : MonoBehaviour
     private float rotY = 0.0f; 
     private float rotX = 0.0f;
 
+    public GameObject BulletPrefab;
+    public GameObject BulletSpawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,8 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         Moving();
+
+        Shoot();
     }
 
     void Moving()
@@ -47,5 +52,15 @@ public class Movement : MonoBehaviour
 
     }
 
+    void Shoot()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+           GameObject Bullet =  Instantiate<GameObject>(BulletPrefab);
+
+            Bullet.transform.position = BulletSpawnPoint.transform.position;
+            Bullet.transform.rotation = this.transform.rotation;
+        }
+    }
    
 }

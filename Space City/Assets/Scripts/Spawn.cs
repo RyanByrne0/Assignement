@@ -42,7 +42,7 @@ public class Spawn : MonoBehaviour
     void Spawning()
     {
 
-        if (Player.transform.position.x > 15000 || Player.transform.position.x < -15000 || Player.transform.position.y > 4000 || Player.transform.position.y < -4000 || Player.transform.position.z > 15000 || Player.transform.position.z < -15000)
+        if (Player.transform.position.x > 15000 || Player.transform.position.x < -15000 || Player.transform.position.y > 8000 || Player.transform.position.y < -8000 || Player.transform.position.z > 15000 || Player.transform.position.z < -15000)
         {
             Player.transform.position = new Vector3(0, 0, 0);
 
@@ -57,7 +57,7 @@ public class Spawn : MonoBehaviour
             {
                 //spawn pos of buildings
                 xPos = Random.Range(-15500, 15500);
-                yPos = Random.Range(-4000, 4000);
+                yPos = Random.Range(-8000, 8000);
                 zPos = Random.Range(-15500, 15500);
                 
                 Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, Player.transform.position.y + yPos, Player.transform.position.z + zPos), Quaternion.identity);
@@ -84,7 +84,7 @@ public class Spawn : MonoBehaviour
         {
             //spawn pos of buildings
             xPos = Random.Range(-15000, 15000);
-            yPos = Random.Range(-4000, 4000);
+            yPos = Random.Range(-8000, 8000);
             zPos = Random.Range(-15500, 15500);
             Instantiate(Planet, new Vector3(Player.transform.position.x + xPos, Player.transform.position.y + yPos, Player.transform.position.z + zPos), Quaternion.identity);
 

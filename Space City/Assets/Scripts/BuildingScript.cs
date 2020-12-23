@@ -32,11 +32,11 @@ public class BuildingScript : MonoBehaviour
     {
        if(transform.position.y < -4000)
         {
-            y += Random.Range(5* Time.deltaTime , 20 * Time.deltaTime );
+            y = Random.Range(5* Time.deltaTime , 20 * Time.deltaTime );
         }
        else if(transform.position.y > 4000)
         {
-            y += Random.Range(-5 * Time.deltaTime, -20 * Time.deltaTime);
+            y = Random.Range(-5 * Time.deltaTime, -20 * Time.deltaTime);
         }
 
         transform.Translate(0, y, 0);
