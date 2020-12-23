@@ -19,6 +19,7 @@ I anticipate that I will lokk at my past projects in order to help me along with
 also use the project used within our class to assist this creation.
 
 Description -
+
 'Galactic Disruption' is a programme in which the player flies around an open space, intended to be outer
 space. They can choose if they wish to just explore or destroy all the planets they want with their ability 
 to fire 'planet destroyers'. When a planet is destroyed it will explode, destroying any planets close by. This
