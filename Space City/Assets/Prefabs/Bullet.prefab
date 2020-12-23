@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 0}
+  ExplosionObject: {fileID: 4428695529956967692, guid: 8906b5fb55c19254ab16026c98123445,
+    type: 3}
 --- !u!108 &3721446235349974318
 Light:
   m_ObjectHideFlags: 0
