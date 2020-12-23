@@ -76,7 +76,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
         {
            GameObject Bullet =  Instantiate<GameObject>(BulletPrefab);
-           
+            audioClips[0].Play();
             Bullet.transform.position = BulletSpawnPoint.transform.position;
             Bullet.transform.rotation = this.transform.rotation;
         }
