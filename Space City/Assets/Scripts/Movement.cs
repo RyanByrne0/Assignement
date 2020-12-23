@@ -10,11 +10,16 @@ public class Movement : MonoBehaviour
     public float maxSpeed;
     public float mouseSensitivity = 100.0f;
     public float clampAngle = 80.0f;
+    public float ROF = 2;
     private float rotY = 0.0f; 
     private float rotX = 0.0f;
+   
 
     public GameObject BulletPrefab;
     public GameObject BulletSpawnPoint;
+
+    public AudioSource[] audioClips;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +29,17 @@ public class Movement : MonoBehaviour
         rotX = rot.x;
     }
 
+    public void OnEnable()
+    {
+        StartCoroutine(Shooting());
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
         Moving();
 
-        Shoot();
+        
     }
 
     void Moving()
@@ -52,12 +62,21 @@ public class Movement : MonoBehaviour
 
     }
 
+    IEnumerator Shooting()
+    {
+        while (true)
+        {
+            Shoot();
+            yield return new WaitForSeconds(1.0f / (float)ROF);
+        }
+    }
+
     void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
            GameObject Bullet =  Instantiate<GameObject>(BulletPrefab);
-
+           
             Bullet.transform.position = BulletSpawnPoint.transform.position;
             Bullet.transform.rotation = this.transform.rotation;
         }

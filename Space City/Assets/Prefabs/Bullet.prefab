@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5606162336127552851}
   - component: {fileID: 4514679862701395855}
   - component: {fileID: 3721446235349974318}
+  - component: {fileID: -6913192409805859407}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 889609828715706339}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.048798267, y: 0.0155135365, z: 0.15259276}
+  m_LocalScale: {x: 0.5507154, y: 0.17507884, z: 1.7220936}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -171,3 +172,17 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!64 &-6913192409805859407
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889609828715706339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
