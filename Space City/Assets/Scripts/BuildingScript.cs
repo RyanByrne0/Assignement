@@ -11,7 +11,7 @@ public class BuildingScript : MonoBehaviour
     public float y;
     void Start()
     {
-        Color ranColor = Random.ColorHSV(0, 1, .8f, 1);
+        Color ranColor = Random.ColorHSV(0, 1, .5f, 1);
         Pos = transform.position;
         y = Random.Range(-20 * Time.deltaTime, 20 * Time.deltaTime );
         ApplyMaterial(ranColor, 0);

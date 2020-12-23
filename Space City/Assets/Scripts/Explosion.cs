@@ -11,8 +11,8 @@ public class Explosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Ran = Random.Range(5, 15);
-        ExplodingTime = Random.Range(8, 15);
+        Ran = Random.Range(5, 6);
+        ExplodingTime = Random.Range(4, 8);
     }
     // Update is called once per frame
     void Update()

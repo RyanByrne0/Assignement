@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float BulletDuration = 10;
+    public float BulletDuration = 20;
 
     public AudioSource Explosion;
 
@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, GameObject.Find("Player").GetComponent<Movement>().maxSpeed * Time.deltaTime * 1.30f);
+        transform.Translate(0, 0, GameObject.Find("Player").GetComponent<Movement>().maxSpeed * Time.deltaTime * 2f);
 
         Duration();
     }
