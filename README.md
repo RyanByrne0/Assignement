@@ -28,7 +28,8 @@ will spawn around them. I used suitable and immersive audio so this is best expe
 also made good use of the particle systems provided by Unity to create a more atmospheric environment, making the 
 player feel as if they are travelling at extremely high speeds, which they are to be honest. With the spawn system 
 I created all planets are different in every aspect, including size and color. They rotate and gain or lose altitude
-depending on their position.
+depending on their position.(SOUND WARNING) - I advise you start with low sound and adjust from there because some of the audio may
+be too loud, sorry.
 
 Most of the code I done completely independently but not all, I went and looked at the coroutine on the tank which was 
 created in class and used it in a similar way, to set the rate of fire of the powerful weaponary in the programme. I also 
@@ -38,5 +39,5 @@ all me though.
 Looking at it now, I am most proud of the script used to spawn the planets. I think I made great use of the randomisation 
 in order to create a unique experience with each play. I am also proud of the audio choices, I feel I picked very suitable sounds.
 
-
+https://www.youtube.com/watch?v=La1pBAs9sl4
 
