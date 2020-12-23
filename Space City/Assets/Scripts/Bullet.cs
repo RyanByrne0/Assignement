@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public float BulletDuration = 10;
+
     public AudioSource Explosion;
 
     public GameObject ExplosionObject;
@@ -17,6 +19,8 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(0, 0, GameObject.Find("Player").GetComponent<Movement>().maxSpeed * Time.deltaTime * 1.30f);
+
+        Duration();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,6 +30,16 @@ public class Bullet : MonoBehaviour
             Instantiate(ExplosionObject, new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z), Quaternion.identity);
             Explosion.Play();
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+    }
+
+    void Duration()
+    {
+        BulletDuration -= Time.deltaTime;
+
+        if(BulletDuration <= 0)
+        {
             Destroy(this.gameObject);
         }
     }

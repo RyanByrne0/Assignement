@@ -35,5 +35,13 @@ public class Explosion : MonoBehaviour
         }
     }
 
-   
+     void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Planet"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
+
 }
