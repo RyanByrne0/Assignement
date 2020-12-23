@@ -13,7 +13,7 @@ public class BuildingScript : MonoBehaviour
     {
         Color ranColor = Random.ColorHSV(0, 1, .5f, 1);
         Pos = transform.position;
-        y = Random.Range(-20 * Time.deltaTime, 20 * Time.deltaTime );
+        y = Random.Range(-100 * Time.deltaTime, 100 * Time.deltaTime );
         ApplyMaterial(ranColor, 0);
     }
 
