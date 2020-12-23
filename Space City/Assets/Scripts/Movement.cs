@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     public float maxSpeed;
     public float mouseSensitivity = 100.0f;
     public float clampAngle = 80.0f;
-    public float ROF = 2;
+    public float ROF = .5f;
     private float rotY = 0.0f; 
     private float rotX = 0.0f;
    
@@ -67,7 +67,7 @@ public class Movement : MonoBehaviour
         while (true)
         {
             Shoot();
-            yield return new WaitForSeconds(1.0f / (float)ROF);
+            yield return new WaitForSeconds(2.5f / (float)ROF);
         }
     }
 

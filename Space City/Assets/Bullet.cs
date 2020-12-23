@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public AudioSource Explosion;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Explosion = GameObject.Find("Player").GetComponent<Movement>().audioClips[1];
     }
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Planet"))
         {
+            Explosion.Play();
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
